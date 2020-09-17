@@ -1,0 +1,365 @@
+<!-- all time settings are in milliseconds -->
+<FirearmAttackTypes> <!-- Reduced resetTime -->
+	<AttackType name="SWAT_VeterinaryAimedFireShort">
+		<ModifiableParams
+			minDistanceMeters="0"
+			maxDistanceMeters="2"
+
+			priority="3"
+			minAimTime="300"
+			maxAimTime="300"
+			accuracyModifierPercent="100"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="0"
+			followupShotTime="0"
+			resetTime="500"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_VeterinaryAimedFire"> <!-- Reduced resetTime -->
+		<ModifiableParams
+			minDistanceMeters="2"
+			maxDistanceMeters="8"
+
+			priority="3"
+			minAimTime="300"
+			maxAimTime="700"
+			accuracyModifierPercent="80"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="0"
+			followupShotTime="0"
+			resetTime="500"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_VeterinaryAimedFireLong"> <!-- Reduced resetTime, maxAimTime -->
+		<ModifiableParams
+			minDistanceMeters="8"
+			maxDistanceMeters="30"
+			priority="3"
+			minAimTime="700"
+			maxAimTime="1300"
+			accuracyModifierPercent="60"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="0"
+			followupShotTime="0"
+			resetTime="500"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_VeterinaryAimedFireLongXX"> <!-- Reduced resetTime, min/max AimTime -->		<ModifiableParams
+			minDistanceMeters="30"
+			maxDistanceMeters="9999"
+			priority="3"
+			minAimTime="1300"
+			maxAimTime="1300"
+			accuracyModifierPercent="30"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="0"
+			followupShotTime="0"
+			resetTime="500"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_MCX300RapidFire">		<ModifiableParams
+			minDistanceMeters="3"
+			maxDistanceMeters="7"
+
+			priority="1"
+			minAimTime="450"
+			maxAimTime="450"
+			minShots="2"
+			maxShots="-1"
+			accuracyModifierPercent="35"
+			followupShotAccuracyBonusPercent="10"
+			followupShotTime="0"
+			resetTime="350"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_MCX300RapidFireMed">		<ModifiableParams
+			minDistanceMeters="7"
+			maxDistanceMeters="15"
+
+			priority="1"
+			minAimTime="450"
+			maxAimTime="700"
+			minShots="2"
+			maxShots="-1"
+			accuracyModifierPercent="40"
+			followupShotAccuracyBonusPercent="10"
+			followupShotTime="0"
+			resetTime="325"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_MCX300AimedFire">		<ModifiableParams
+			minDistanceMeters="15"
+			maxDistanceMeters="50"
+			priority="3"
+			minAimTime="700"
+			maxAimTime="900"
+			accuracyModifierPercent="90"
+			minShots="1"
+			maxShots="2"
+			followupShotAccuracyBonusPercent="20"
+			followupShotTime="440"
+			resetTime="250"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_MCX300AimedFireXX">		<ModifiableParams
+			minDistanceMeters="50"
+			maxDistanceMeters="9999"
+			priority="3"
+			minAimTime="900"
+			maxAimTime="900"
+			accuracyModifierPercent="80"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="20"
+			followupShotTime="450"
+			resetTime="200"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_HBRapidFire">		<ModifiableParams
+			minDistanceMeters="3"
+			maxDistanceMeters="7"
+
+			priority="1"
+			minAimTime="450"
+			maxAimTime="450"
+			minShots="2"
+			maxShots="-1"
+			accuracyModifierPercent="35"
+			followupShotAccuracyBonusPercent="18"
+			followupShotTime="0"
+			resetTime="300"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_HBAimedFire">		<ModifiableParams
+			minDistanceMeters="15"
+			maxDistanceMeters="45"
+			priority="3"
+			minAimTime="700"
+			maxAimTime="900"
+			accuracyModifierPercent="90"
+			minShots="1"
+			maxShots="2"
+			followupShotAccuracyBonusPercent="20"
+			followupShotTime="400"
+			resetTime="200"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_HBAimedFireXX">		<ModifiableParams
+			minDistanceMeters="45"
+			maxDistanceMeters="9999"
+			priority="3"
+			minAimTime="900"
+			maxAimTime="900"
+			accuracyModifierPercent="80"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="20"
+			followupShotTime="400"
+			resetTime="200"
+		/>	</AttackType>
+
+
+	<AttackType name="SWAT_635PDWRapidFire">		<ModifiableParams
+			minDistanceMeters="3"
+			maxDistanceMeters="7"
+			priority="3"
+			minAimTime="450"
+			maxAimTime="450"
+			minShots="2"
+			maxShots="-1"
+			accuracyModifierPercent="35"
+			followupShotAccuracyBonusPercent="25"
+			followupShotTime="150"
+			resetTime="150"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_635PDWAuto">		<ModifiableParams
+			minDistanceMeters="3"
+			maxDistanceMeters="7"
+			priority="1"
+			minAimTime="450"
+			maxAimTime="450"
+			minShots="3"
+			maxShots="6"
+			accuracyModifierPercent="100"
+			followupShotAccuracyBonusPercent="-1"
+			followupShotTime="0"
+			resetTime="150"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_635PDWRapidFireMed">		<ModifiableParams
+			minDistanceMeters="7"
+			maxDistanceMeters="15"
+
+			priority="1"
+			minAimTime="450"
+			maxAimTime="700"
+			minShots="2"
+			maxShots="-1"
+			accuracyModifierPercent="40"
+			followupShotAccuracyBonusPercent="25"
+			followupShotTime="180"
+			resetTime="280"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_635PDWAimedFire">		<ModifiableParams
+			minDistanceMeters="15"
+			maxDistanceMeters="60"
+			priority="3"
+			minAimTime="700"
+			maxAimTime="900"
+			accuracyModifierPercent="90"
+			minShots="1"
+			maxShots="2"
+			followupShotAccuracyBonusPercent="20"
+			followupShotTime="280"
+			resetTime="200"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_635PDWAimedFireXX">		<ModifiableParams
+			minDistanceMeters="60"
+			maxDistanceMeters="9999"
+			priority="3"
+			minAimTime="900"
+			maxAimTime="900"
+			accuracyModifierPercent="80"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="20"
+			followupShotTime="320"
+			resetTime="200"
+		/>	</AttackType>
+
+
+	<AttackType name="SWAT_DoubleTapCZSP">
+		<ModifiableParams
+			minDistanceMeters="1.5"
+			maxDistanceMeters="4"
+
+			priority="0"
+			minAimTime="200"
+			maxAimTime="200"
+			accuracyModifierPercent="40"
+			followupShotAccuracyBonusPercent="-3"
+			minShots="2"
+			maxShots="2"
+			followupShotTime="0"
+			resetTime="250"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_MozambiqueCZSP">
+		<ModifiableParams
+			minDistanceMeters="1.5"
+			maxDistanceMeters="4"
+
+			priority="0"
+			minAimTime="200"
+			maxAimTime="200"
+			accuracyModifierPercent="40"
+			followupShotAccuracyBonusPercent="-3"
+			minShots="3"
+			maxShots="3"
+			followupShotTime="0"
+			resetTime="250"
+		/>	</AttackType>
+
+
+	<AttackType name="SWAT_ControlledPairCZSP">
+		<ModifiableParams
+			minDistanceMeters="4"
+			maxDistanceMeters="8"
+
+			priority="0"
+			minAimTime="200"
+			maxAimTime="400"
+			accuracyModifierPercent="70"
+			followupShotAccuracyBonusPercent="0"
+			minShots="2"
+			maxShots="2"
+			followupShotTime="220"
+			resetTime="250"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_MozambiqueLongCZSP">
+		<ModifiableParams
+			minDistanceMeters="4"
+			maxDistanceMeters="8"
+
+			priority="0"
+			minAimTime="200"
+			maxAimTime="400"
+			accuracyModifierPercent="70"
+			followupShotAccuracyBonusPercent="0"
+			minShots="3"
+			maxShots="3"
+			followupShotTime="220"
+			resetTime="250"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_PistolAimedFireShortCZSP">
+		<ModifiableParams
+			minDistanceMeters="1.5"
+			maxDistanceMeters="8"
+
+			priority="3"
+			minAimTime="400"
+			maxAimTime="400"
+			accuracyModifierPercent="40"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="60"
+			followupShotTime="0"
+			resetTime="0"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_PistolAimedFireCZSP">
+		<ModifiableParams
+			minDistanceMeters="8"
+			maxDistanceMeters="15"
+
+			priority="3"
+			minAimTime="400"
+			maxAimTime="800"
+			accuracyModifierPercent="80"
+			minShots="1"
+			maxShots="2"
+			followupShotAccuracyBonusPercent="60"
+			followupShotTime="300"
+			resetTime="0"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_PistolAimedFireLongCZSP">
+		<ModifiableParams
+			minDistanceMeters="15"
+			maxDistanceMeters="30"
+			priority="3"
+			minAimTime="800"
+			maxAimTime="1100"
+			accuracyModifierPercent="30"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="0"
+			followupShotTime="0"
+			resetTime="175"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_PistolAimedFireLongCZSPXX">		<ModifiableParams
+			minDistanceMeters="30"
+			maxDistanceMeters="9999"
+			priority="3"
+			minAimTime="1100"
+			maxAimTime="1100"
+			accuracyModifierPercent="30"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="0"
+			followupShotTime="0"
+			resetTime="175"
+		/>	</AttackType>
+
+
+</FirearmAttackTypes>

@@ -1,0 +1,595 @@
+<!-- all time settings are in milliseconds -->
+<FirearmAttackTypes>
+	<AttackType name="SWAT_Vector2rdBurst">		<ModifiableParams
+			minDistanceMeters="3"
+			maxDistanceMeters="7"
+			priority="1"
+			minAimTime="450"
+			maxAimTime="450"
+			minShots="2"
+			maxShots="2"
+			accuracyModifierPercent="100"
+			followupShotAccuracyBonusPercent="0"
+			followupShotTime="0"
+			resetTime="150"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_VectorRangedBurst">		<ModifiableParams
+			minDistanceMeters="7"
+			maxDistanceMeters="15"
+			priority="1"
+			minAimTime="450"
+			maxAimTime="700"
+			minShots="2"
+			maxShots="2"
+			accuracyModifierPercent="35"
+			followupShotAccuracyBonusPercent="25"
+			followupShotTime="0"
+			resetTime="175"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_VectorAimedFire">		<ModifiableParams
+			minDistanceMeters="15"
+			maxDistanceMeters="30"
+			priority="3"
+			minAimTime="500"
+			maxAimTime="600"
+			accuracyModifierPercent="100"
+			minShots="1"
+			maxShots="2"
+			followupShotAccuracyBonusPercent="20"
+			followupShotTime="250"
+			resetTime="200"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_VectorAimedFireLong">		<ModifiableParams
+			minDistanceMeters="30"
+			maxDistanceMeters="50"
+			priority="3"
+			minAimTime="600"
+			maxAimTime="900"
+			accuracyModifierPercent="60"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="20"
+			followupShotTime="400"
+			resetTime="200"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_VectorAimedFireLongXX">		<ModifiableParams
+			minDistanceMeters="50"
+			maxDistanceMeters="9999"
+			priority="3"
+			minAimTime="900"
+			maxAimTime="900"
+			accuracyModifierPercent="50"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="15"
+			followupShotTime="400"
+			resetTime="200"
+		/>	</AttackType>
+
+
+	<AttackType name="SWAT_RevolverEmergencyFireTRR8">		<ModifiableParams
+			minDistanceMeters="0"
+			maxDistanceMeters="1.5"
+			priority="3"
+			minAimTime="200"
+			maxAimTime="200"
+			accuracyModifierPercent="40"
+			followupShotAccuracyBonusPercent="-6"
+			minShots="1"
+			maxShots="-1"
+			followupShotTime="0"
+			resetTime="200"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_RevolverAimedFireShortTRR8">
+		<ModifiableParams
+			minDistanceMeters="1.5"
+			maxDistanceMeters="8"
+
+			priority="3"
+			minAimTime="400"
+			maxAimTime="400"
+			accuracyModifierPercent="40"
+			minShots="1"
+			maxShots="2"
+			followupShotAccuracyBonusPercent="40"
+			followupShotTime="0"
+			resetTime="100"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_RevolverAimedFireTRR8">
+		<ModifiableParams
+			minDistanceMeters="8"
+			maxDistanceMeters="15"
+
+			priority="3"
+			minAimTime="400"
+			maxAimTime="800"
+			accuracyModifierPercent="80"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="50"
+			followupShotTime="0"
+			resetTime="100"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_RevolverEmergencyFire44">		<ModifiableParams
+			minDistanceMeters="0"
+			maxDistanceMeters="1.5"
+			priority="3"
+			minAimTime="200"
+			maxAimTime="200"
+			accuracyModifierPercent="40"
+			followupShotAccuracyBonusPercent="-10"
+			minShots="1"
+			maxShots="-1"
+			followupShotTime="0"
+			resetTime="300"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_RevolverAimedFireShort44">
+		<ModifiableParams
+			minDistanceMeters="1.5"
+			maxDistanceMeters="8"
+
+			priority="3"
+			minAimTime="400"
+			maxAimTime="400"
+			accuracyModifierPercent="40"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="30"
+			followupShotTime="0"
+			resetTime="150"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_RevolverAimedFire44">
+		<ModifiableParams
+			minDistanceMeters="8"
+			maxDistanceMeters="15"
+
+			priority="3"
+			minAimTime="400"
+			maxAimTime="800"
+			accuracyModifierPercent="70"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="0"
+			followupShotTime="0"
+			resetTime="150"
+		/>	</AttackType>
+
+
+	<AttackType name="SWAT_RevolverAimedFireLongTRR8">
+		<ModifiableParams
+			minDistanceMeters="15"
+			maxDistanceMeters="30"
+			priority="3"
+			minAimTime="1250"
+			maxAimTime="1550"
+			accuracyModifierPercent="70"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="0"
+			followupShotTime="0"
+			resetTime="0"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_RevolverAimedFireLongTRR8XX">		<ModifiableParams
+			minDistanceMeters="30"
+			maxDistanceMeters="9999"
+			priority="3"
+			minAimTime="1550"
+			maxAimTime="1800"
+			accuracyModifierPercent="50"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="0"
+			followupShotTime="0"
+			resetTime="0"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_EmergencyFireMark23">		<ModifiableParams
+			minDistanceMeters="0"
+			maxDistanceMeters="1.5"
+			priority="3"
+			minAimTime="200"
+			maxAimTime="200"
+			accuracyModifierPercent="40"
+			followupShotAccuracyBonusPercent="-5"
+			minShots="1"
+			maxShots="-1"
+			followupShotTime="0"
+			resetTime="170"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_DoubleTapMark23">
+		<ModifiableParams
+			minDistanceMeters="1.5"
+			maxDistanceMeters="4"
+
+			priority="0"
+			minAimTime="230"
+			maxAimTime="230"
+			accuracyModifierPercent="40"
+			followupShotAccuracyBonusPercent="-4"
+			minShots="2"
+			maxShots="2"
+			followupShotTime="0"
+			resetTime="270"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_MozambiqueMark23">
+		<ModifiableParams
+			minDistanceMeters="1.5"
+			maxDistanceMeters="4"
+
+			priority="0"
+			minAimTime="230"
+			maxAimTime="230"
+			accuracyModifierPercent="40"
+			followupShotAccuracyBonusPercent="-5"
+			minShots="3"
+			maxShots="3"
+			followupShotTime="0"
+			resetTime="270"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_ControlledPairMark23">
+		<ModifiableParams
+			minDistanceMeters="4"
+			maxDistanceMeters="8"
+
+			priority="0"
+			minAimTime="230"
+			maxAimTime="460"
+			accuracyModifierPercent="70"
+			followupShotAccuracyBonusPercent="0"
+			minShots="2"
+			maxShots="2"
+			followupShotTime="220"
+			resetTime="250"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_MozambiqueLongMark23">
+		<ModifiableParams
+			minDistanceMeters="4"
+			maxDistanceMeters="8"
+
+			priority="0"
+			minAimTime="230"
+			maxAimTime="460"
+			accuracyModifierPercent="70"
+			followupShotAccuracyBonusPercent="0"
+			minShots="3"
+			maxShots="3"
+			followupShotTime="235"
+			resetTime="280"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_PistolAimedFireShortMark23">
+		<ModifiableParams
+			minDistanceMeters="1.5"
+			maxDistanceMeters="8"
+
+			priority="3"
+			minAimTime="460"
+			maxAimTime="460"
+			accuracyModifierPercent="45"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="50"
+			followupShotTime="0"
+			resetTime="0"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_PistolAimedFireMark23">
+		<ModifiableParams
+			minDistanceMeters="8"
+			maxDistanceMeters="15"
+
+			priority="3"
+			minAimTime="460"
+			maxAimTime="660"
+			accuracyModifierPercent="80"
+			minShots="1"
+			maxShots="2"
+			followupShotAccuracyBonusPercent="50"
+			followupShotTime="350"
+			resetTime="0"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_PistolAimedFireLongMark23">
+		<ModifiableParams
+			minDistanceMeters="15"
+			maxDistanceMeters="40"
+			priority="3"
+			minAimTime="660"
+			maxAimTime="1000"
+			accuracyModifierPercent="40"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="0"
+			followupShotTime="0"
+			resetTime="175"
+		/>	</AttackType>
+
+
+	<AttackType name="SWAT_PistolAimedFireLongMark23XX">		<ModifiableParams
+			minDistanceMeters="40"
+			maxDistanceMeters="9999"
+			priority="3"
+			minAimTime="1000"
+			maxAimTime="1300"
+			accuracyModifierPercent="40"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="0"
+			followupShotTime="0"
+			resetTime="175"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_BrenRapidFire">		<ModifiableParams
+			minDistanceMeters="3"
+			maxDistanceMeters="7"
+
+			priority="1"
+			minAimTime="500"
+			maxAimTime="500"
+			minShots="2"
+			maxShots="-1"
+			accuracyModifierPercent="30"
+			followupShotAccuracyBonusPercent="20"
+			followupShotTime="0"
+			resetTime="300"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_BrenRapidFireMed">		<ModifiableParams
+			minDistanceMeters="7"
+			maxDistanceMeters="15"
+
+			priority="1"
+			minAimTime="500"
+			maxAimTime="750"
+			minShots="2"
+			maxShots="-1"
+			accuracyModifierPercent="30"
+			followupShotAccuracyBonusPercent="20"
+			followupShotTime="0"
+			resetTime="300"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_BrenAimedFire">		<ModifiableParams
+			minDistanceMeters="15"
+			maxDistanceMeters="60"
+			priority="3"
+			minAimTime="750"
+			maxAimTime="900"
+			accuracyModifierPercent="95"
+			minShots="1"
+			maxShots="2"
+			followupShotAccuracyBonusPercent="20"
+			followupShotTime="400"
+			resetTime="200"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_BrenAimedFireXX">		<ModifiableParams
+			minDistanceMeters="60"
+			maxDistanceMeters="9999"
+			priority="3"
+			minAimTime="900"
+			maxAimTime="900"
+			accuracyModifierPercent="90"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="20"
+			followupShotTime="400"
+			resetTime="200"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_ShieldRevolverEmergencyFire">
+		<ModifiableParams
+			minDistanceMeters="0"
+			maxDistanceMeters="1.5"
+			priority="3"
+			minAimTime="200"
+			maxAimTime="200"
+			accuracyModifierPercent="40"
+			followupShotAccuracyBonusPercent="-12"
+			minShots="1"
+			maxShots="-1"
+			followupShotTime="0"
+			resetTime="200"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_ShieldRevolverEmergencyFire44">
+		<ModifiableParams
+			minDistanceMeters="0"
+			maxDistanceMeters="1.5"
+			priority="3"
+			minAimTime="200"
+			maxAimTime="200"
+			accuracyModifierPercent="40"
+			followupShotAccuracyBonusPercent="-15"
+			minShots="1"
+			maxShots="-1"
+			followupShotTime="0"
+			resetTime="400"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_ShieldRevolverAimedFire">
+		<ModifiableParams
+			minDistanceMeters="1.5"
+			maxDistanceMeters="10"
+			priority="3"
+			minAimTime="200"
+			maxAimTime="800"
+			accuracyModifierPercent="60"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="0"
+			followupShotTime="0"
+			resetTime="200"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_ShieldRevolverAimedFire44">
+		<ModifiableParams
+			minDistanceMeters="1.5"
+			maxDistanceMeters="10"
+			priority="3"
+			minAimTime="200"
+			maxAimTime="800"
+			accuracyModifierPercent="60"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="0"
+			followupShotTime="0"
+			resetTime="400"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_ShieldRevolverAimedFireLong">		<ModifiableParams
+			minDistanceMeters="10"
+			maxDistanceMeters="20"
+			priority="3"
+			minAimTime="800"
+			maxAimTime="2000"
+			accuracyModifierPercent="30"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="0"
+			followupShotTime="0"
+			resetTime="200"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_ShieldRevolverAimedFireLong44">		<ModifiableParams
+			minDistanceMeters="10"
+			maxDistanceMeters="20"
+			priority="3"
+			minAimTime="800"
+			maxAimTime="2000"
+			accuracyModifierPercent="30"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="0"
+			followupShotTime="0"
+			resetTime="400"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_ShieldRevolverAimedFireLongXX">		<ModifiableParams
+			minDistanceMeters="20"
+			maxDistanceMeters="9999"
+			priority="3"
+			minAimTime="2000"
+			maxAimTime="2600"
+			accuracyModifierPercent="25"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="0"
+			followupShotTime="0"
+			resetTime="200"
+		/>	</AttackType>
+
+	<AttackType name="SWAT_ShieldRevolverAimedFireLongXX44">		<ModifiableParams
+			minDistanceMeters="20"
+			maxDistanceMeters="9999"
+			priority="3"
+			minAimTime="2000"
+			maxAimTime="2600"
+			accuracyModifierPercent="20"
+			minShots="1"
+			maxShots="1"
+			followupShotAccuracyBonusPercent="0"
+			followupShotTime="0"
+			resetTime="400"
+		/>	</AttackType>
+
+
+	<AttackType name="RecklessOperator_MP9Auto"> <!--  Nerfed Min and Max shots to 1 min / 2 max -->
+
+	<ModifiableParams
+			minDistanceMeters="0"
+			maxDistanceMeters="7"
+
+			priority="1"
+			minAimTime="500"
+			maxAimTime="500"
+			minShots="1"
+			maxShots="2"
+			accuracyModifierPercent="25"
+			followupShotAccuracyBonusPercent="-5"
+			followupShotTime="0"
+			resetTime="250"
+		/>	</AttackType>
+
+
+	<AttackType name="RecklessOperator_MP9Burst"> <!--  Nerfed Min and Max shots to 1 min / 2 max -->
+		<ModifiableParams
+			minDistanceMeters="7"
+			maxDistanceMeters="15"
+
+			priority="1"
+			minAimTime="500"
+			maxAimTime="500"
+			minShots="1"
+			maxShots="2"
+			accuracyModifierPercent="25"
+			followupShotAccuracyBonusPercent="-5"
+			followupShotTime="0"
+			resetTime="250"
+		/>	</AttackType>
+
+	<AttackType name="RecklessOperator_MP9AimedBurst">	<!--  Nerfed Min and Max shots to 1 min / 2 max -->	
+	
+	<ModifiableParams
+			minDistanceMeters="15"
+			maxDistanceMeters="30"
+
+			priority="3"
+			minAimTime="500"
+			maxAimTime="1000"
+			accuracyModifierPercent="50"
+			minShots="1"
+			maxShots="2"
+			followupShotAccuracyBonusPercent="-5"
+			followupShotTime="0"
+			resetTime="200"
+		/>	</AttackType>
+
+	<AttackType name="RecklessOperator_MP9AimedBurstLong"> <!--  Nerfed Min and Max shots to 1 min / 2 max -->		
+	
+	<ModifiableParams
+			minDistanceMeters="30"
+			maxDistanceMeters="9999"
+
+			priority="3"
+			minAimTime="1000"
+			maxAimTime="1000"
+			accuracyModifierPercent="30"
+			minShots="1"
+			maxShots="2"
+			followupShotAccuracyBonusPercent="-3"
+			followupShotTime="0"
+			resetTime="200"
+		/>	</AttackType> <!--  Nerfed Min and Max shots to 1 min / 2 max -->
+
+
+	<AttackType name="SWAT_TestGrenadeLauncher">
+		<ModifiableParams
+			minDistanceMeters="0"
+			maxDistanceMeters="99999"
+			priority="1"
+			minAimTime="350"
+			maxAimTime="600"
+			minShots="2"
+			maxShots="-1"
+			accuracyModifierPercent="100"
+			followupShotAccuracyBonusPercent="0"
+			followupShotTime="175"
+			resetTime="150"
+		/>
+	</AttackType>
+</FirearmAttackTypes>

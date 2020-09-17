@@ -1,0 +1,78 @@
+---
+Changes
+---
+Shotgun Thug
+	Increased aiming time (Less twitchy instant reflexes)
+
+Jacketed Jake
+	Reduced AP (5 AP instead of 6, same as P90)
+	Reduced RoF (Shortened full-auto bursts)
+
+Operator Orville, Grenadier Glenn, Businesslike Ben
+	NOTE: Same attacktype shared between all ("Operator")
+	Reduced RoF (Shortened full-auto bursts)
+
+Juggernaut
+	Reduced ROF (Shortened full-auto bursts)
+
+Junkie Harry
+	Increased aiming time
+	
+Nameless Thug
+	Reduced ROF (Shortened full-auto bursts)
+
+Tackdriver Tim
+	Increased aiming time
+
+MK17
+	Armor piercing ability added
+
+Stingers
+	100% Chance to stun (Instead of 50%)
+	Slight damage, scatter effect increase
+	
+Breaching Charges
+	Quantity increased to 2x
+	
+Revolver (686 Plus, .357, .44)
+	Can use Double Tap and Mozambique Drill doctrines
+	
+Veterinary Pistol
+	Slightly increased RoF
+	Decreased aim time
+	Slightly decreased spread
+	
+Tazer
+	Decreased aim time
+	Slightly increased reload speed (same as Veterinary Pistol)
+	Slightly increased swap speed (change In/Out Time)
+---
+Possible Plans:
+---
+Troopers fire faster? Full Auto? [MAYBE]
+
+Look into how AI Rebalance works (Ex. Extra Enemy Armor) [MAYBE]
+	Speed/Aim of Pointman class
+	
+	Global aimspeed increase for player units
+
+	Increased pistol effectiveness in general
+
+	Accuracy/Speed/Followup Speed/Bullet Count increase for attack types
+
+	Remove extra armor applied to all enemies
+
+Look into how Rebalanced Equipments and Classes works (Ex. Pointman FOV) [MAYBE]
+
+	Fix Mozambique minimum distance
+
+	Shield handgun accuracy buff 
+
+	Apply handgun skill to shield class (Precision, Double Tap, Mozambique)
+
+	Pointman FOV increase, perception increase
+
+	Shield can use lockpick, spy camera
+
+Reskin Double Dave (Shotgun Thug)
+	Red Shirt?

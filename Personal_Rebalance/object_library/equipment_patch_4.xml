@@ -1,0 +1,1067 @@
+<Equipment>
+	<Firearm name="Tactical .357 Revolver" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="10" tooltip="@firearm_tactical_357_revolver_name">
+		<Class value="Pointman"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="0" turnSpeedLocalModifierPercent="0"/>
+		<RenderObject2D texture="data/textures/gui/customization/items/sw327.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="pistol"/>
+		<Description value="@firearm_tactical_357_revolver_desc"/>
+
+		<ModifiableParams
+			muzzleDropDistanceMeters="0.26"
+			numPellets="1"
+			roundsPerMagazine="8"
+			roundsPerSecond="4.5"
+			damagePerBullet="11"
+			armorPiercingLevel="3"
+			spreadAt10Meters="0.12"
+			silenced="0"
+			shotSoundMeters="20"
+			closedBolt="0"
+
+			cyclicReload="1"
+			reloadTime="350"
+			reloadEmptyTime="350"
+			changeInTime="880"
+			changeOutTime="720"
+			readyTime="110"
+			guardTime="50"
+		/>		<Params
+			caliberInfoText="@firearm_caliber_357mag_name"
+			operationInfoText="@firearm_operation_doubleactionrev_name"
+
+			ejectingShells="false"		/>
+
+		<AttackTypes>
+			<AttackType name="SWAT_RevolverEmergencyFireTRR8"/>
+			<AttackType name="SWAT_DoubleTap"/>
+			<AttackType name="SWAT_Mozambique"/>
+			<AttackType name="SWAT_RevolverAimedFireShortTRR8"/>
+			<AttackType name="SWAT_RevolverAimedFireTRR8"/>
+			<AttackType name="SWAT_RevolverAimedFireLongTRR8"/>
+			<AttackType name="SWAT_RevolverAimedFireLongTRR8XX"/>
+		</AttackTypes>
+
+		<MuzzleFlash muzzlePointOffset="21 -4" textureAnimation="ANIM_FX_MUZZLE_FLASH_1911">
+			<BulletTrace durationMSec="550">
+				<RenderObject2D texture="data/textures/fx/bullet_trace.dds" sizeX="512" sizeY="8" blendMode="add_masked"/>
+			</BulletTrace>
+			<Flares>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare1.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare2.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare3.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+			</Flares>
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="SFX_1911_EQUIP"/>
+			<Unequip name="SFX_1911_UNEQP"/>
+			<Reload name="SFX_REV38_RELD"/>
+			<ReloadEmpty name="SFX_REV38_RELD"/>
+			<FireSingle name="SFX_TRR8_FIRE"/>
+			<FireSingle name="SFX_TRR8_FIREa"/>
+			<FireRapid name="SFX_TRR8_FIRE"/>
+			<FireRapid name="SFX_TRR8_FIREa"/>
+		</Sounds>
+	</Firearm>
+	
+	<Firearm name="686 PLUS (One Hand)" inventoryBinding="PrimaryWeapon" category="pistol" unlockCost="5" tooltip="@firearm_686_plus_revolver_1h_name">
+		<Class value="Shield"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="0" turnSpeedLocalModifierPercent="0"/>
+		<RenderObject2D texture="data/textures/gui/customization/items/sw686.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="pistol"/>
+		<Description value="@firearm_686_plus_revolver_1h_desc"/>
+
+		<ModifiableParams
+			muzzleDropDistanceMeters="0.6"
+			numPellets="1"
+			roundsPerMagazine="7"
+			roundsPerSecond="4"
+			damagePerBullet="11"
+			armorPiercingLevel="3"
+			spreadAt10Meters="0.14"
+			silenced="0"
+			shotSoundMeters="20"
+			closedBolt="0"
+
+			cyclicReload="1"
+			reloadTime="1050"
+			reloadEmptyTime="1050"
+			changeInTime="700"
+			changeOutTime="700"
+			readyTime="250"
+			guardTime="150"
+		/>		<Params
+			caliberInfoText="@firearm_caliber_357mag_name"
+			operationInfoText="@firearm_operation_doubleactionrev_name"
+
+			ejectingShells="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="SWAT_ShieldRevolverEmergencyFire"/>
+			<AttackType name="SWAT_ShieldRevolverAimedFire"/>
+			<AttackType name="SWAT_ShieldRevolverAimedFireLong"/>
+			<AttackType name="SWAT_ShieldRevolverAimedFireLongXX"/>
+		</AttackTypes>
+
+		<MuzzleFlash muzzlePointOffset="21 -2" textureAnimation="ANIM_FX_MUZZLE_FLASH_1911">
+			<BulletTrace durationMSec="550">
+				<RenderObject2D texture="data/textures/fx/bullet_trace.dds" sizeX="512" sizeY="8" blendMode="add_masked"/>
+			</BulletTrace>
+			<Flares>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare1.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare2.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare3.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+			</Flares>
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="SFX_1911_EQUIP"/>
+			<Unequip name="SFX_1911_UNEQP"/>
+			<Reload name="SFX_REV38_RELD"/>
+			<ReloadEmpty name="SFX_REV38_RELD"/>
+			<FireSingle name="SFX_686PLUS_FIRE"/>
+			<FireSingle name="SFX_686PLUS_FIREa"/>
+			<FireRapid name="SFX_686PLUS_FIRE"/>
+			<FireRapid name="SFX_686PLUS_FIREa"/>
+		</Sounds>
+	</Firearm>
+
+	<Firearm name="Tactical .357 (One Hand)" inventoryBinding="PrimaryWeapon" category="pistol" unlockCost="10" tooltip="@firearm_tactical_357_revolver_1h_name">
+		<Class value="Shield"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="0" turnSpeedLocalModifierPercent="0"/>
+		<RenderObject2D texture="data/textures/gui/customization/items/sw327.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="pistol"/>
+		<Description value="@firearm_tactical_357_revolver_1h_desc"/>
+
+		<ModifiableParams
+			muzzleDropDistanceMeters="0.6"
+			numPellets="1"
+			roundsPerMagazine="8"
+			roundsPerSecond="4.5"
+			damagePerBullet="11"
+			armorPiercingLevel="3"
+			spreadAt10Meters="0.12"
+			silenced="0"
+			shotSoundMeters="20"
+			closedBolt="0"
+
+			cyclicReload="1"
+			reloadTime="1050"
+			reloadEmptyTime="1050"
+			changeInTime="800"
+			changeOutTime="720"
+			readyTime="250"
+			guardTime="150"
+		/>		<Params
+			caliberInfoText="@firearm_caliber_357mag_name"
+			operationInfoText="@firearm_operation_doubleactionrev_name"
+
+			ejectingShells="false"		/>
+
+		<AttackTypes> <!-- Double Tap / Mozambique added to Revolvers -->
+			<AttackType name="SWAT_ShieldRevolverEmergencyFire"/>
+			<AttackType name="SWAT_ShieldRevolverAimedFire"/>
+			<AttackType name="SWAT_ShieldRevolverAimedFireLong"/>
+			<AttackType name="SWAT_ShieldRevolverAimedFireLongXX"/>
+		</AttackTypes>
+
+		<MuzzleFlash muzzlePointOffset="21 -2" textureAnimation="ANIM_FX_MUZZLE_FLASH_1911">
+			<BulletTrace durationMSec="550">
+				<RenderObject2D texture="data/textures/fx/bullet_trace.dds" sizeX="512" sizeY="8" blendMode="add_masked"/>
+			</BulletTrace>
+			<Flares>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare1.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare2.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare3.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+			</Flares>
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="SFX_1911_EQUIP"/>
+			<Unequip name="SFX_1911_UNEQP"/>
+			<Reload name="SFX_REV38_RELD"/>
+			<ReloadEmpty name="SFX_REV38_RELD"/>
+			<FireSingle name="SFX_TRR8_FIRE"/>
+			<FireSingle name="SFX_TRR8_FIREa"/>
+			<FireRapid name="SFX_TRR8_FIRE"/>
+			<FireRapid name="SFX_TRR8_FIREa"/>
+		</Sounds>
+	</Firearm>
+
+	<Firearm name="Magnum 44 Revolver" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="15" tooltip="@firearm_magnum_44_revolver_name">
+		<Class value="Pointman"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="0" turnSpeedLocalModifierPercent="0"/>
+		<RenderObject2D texture="data/textures/gui/customization/items/magnum44.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="pistol"/>
+		<Description value="@firearm_magnum_44_revolver_desc"/>
+
+		<ModifiableParams
+			muzzleDropDistanceMeters="0.26"
+			numPellets="1"
+			roundsPerMagazine="6"
+			roundsPerSecond="4.0"
+			damagePerBullet="13"
+			armorPiercingLevel="4"
+			spreadAt10Meters="0.15"
+			silenced="0"
+			shotSoundMeters="30"
+			closedBolt="0"
+
+			cyclicReload="1"
+			reloadTime="350"
+			reloadEmptyTime="350"
+			changeInTime="850"
+			changeOutTime="700"
+			readyTime="110"
+			guardTime="50"
+		/>		<Params
+			caliberInfoText="@firearm_caliber_44mag_name"
+			operationInfoText="@firearm_operation_doubleactionrev_name"
+
+			ejectingShells="false"		/>
+
+		<AttackTypes> <!-- Double Tap / Mozambique added to Revolvers -->
+			<AttackType name="SWAT_RevolverEmergencyFire44"/>
+			<AttackType name="SWAT_DoubleTap"/>
+			<AttackType name="SWAT_Mozambique"/>
+			<AttackType name="SWAT_RevolverAimedFireShort44"/>
+			<AttackType name="SWAT_RevolverAimedFire44"/>
+			<AttackType name="SWAT_RevolverAimedFireLongTRR8"/>
+			<AttackType name="SWAT_RevolverAimedFireLongTRR8XX"/>
+		</AttackTypes>
+
+		<MuzzleFlash muzzlePointOffset="21 -4" textureAnimation="ANIM_FX_MUZZLE_FLASH_1911">
+			<BulletTrace durationMSec="550">
+				<RenderObject2D texture="data/textures/fx/bullet_trace.dds" sizeX="512" sizeY="8" blendMode="add_masked"/>
+			</BulletTrace>
+			<Flares>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare1.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare2.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare3.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+			</Flares>
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="SFX_1911_EQUIP"/>
+			<Unequip name="SFX_1911_UNEQP"/>
+			<Reload name="SFX_REV38_RELD"/>
+			<ReloadEmpty name="SFX_REV38_RELD"/>
+			<FireSingle name="SFX_MAG44_FIRE"/>
+			<FireSingle name="SFX_MAG44_FIREa"/>
+			<FireRapid name="SFX_MAG44_FIRE"/>
+			<FireRapid name="SFX_MAG44_FIREa"/>
+		</Sounds>
+	</Firearm>
+
+	<Firearm name="Magnum 44 (One Hand)" inventoryBinding="PrimaryWeapon" category="pistol" unlockCost="15" tooltip="@firearm_magnum_44_revolver_1h_name">
+		<Class value="Shield"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="0" turnSpeedLocalModifierPercent="0"/>
+		<RenderObject2D texture="data/textures/gui/customization/items/magnum44.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="pistol"/>
+		<Description value="@firearm_magnum_44_revolver_1h_desc"/>
+
+		<ModifiableParams
+			muzzleDropDistanceMeters="0.6"
+			numPellets="1"
+			roundsPerMagazine="6"
+			roundsPerSecond="4"
+			damagePerBullet="13"
+			armorPiercingLevel="4"
+			spreadAt10Meters="0.15"
+			silenced="0"
+			shotSoundMeters="30"
+			closedBolt="0"
+
+			cyclicReload="1"
+			reloadTime="1050"
+			reloadEmptyTime="1050"
+			changeInTime="760"
+			changeOutTime="720"
+			readyTime="250"
+			guardTime="150"
+		/>		<Params
+			caliberInfoText="@firearm_caliber_44mag_name"
+			operationInfoText="@firearm_operation_doubleactionrev_name"
+
+			ejectingShells="false"		/>
+
+		<AttackTypes>
+			<AttackType name="SWAT_ShieldRevolverEmergencyFire44"/>
+			<AttackType name="SWAT_ShieldRevolverAimedFire44"/>
+			<AttackType name="SWAT_ShieldRevolverAimedFireLong44"/>
+			<AttackType name="SWAT_ShieldRevolverAimedFireLongXX44"/>
+		</AttackTypes>
+
+		<MuzzleFlash muzzlePointOffset="21 -2" textureAnimation="ANIM_FX_MUZZLE_FLASH_1911">
+			<BulletTrace durationMSec="550">
+				<RenderObject2D texture="data/textures/fx/bullet_trace.dds" sizeX="512" sizeY="8" blendMode="add_masked"/>
+			</BulletTrace>
+			<Flares>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare1.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare2.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare3.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+			</Flares>
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="SFX_1911_EQUIP"/>
+			<Unequip name="SFX_1911_UNEQP"/>
+			<Reload name="SFX_REV38_RELD"/>
+			<ReloadEmpty name="SFX_REV38_RELD"/>
+			<FireSingle name="SFX_MAG44_FIRE"/>
+			<FireSingle name="SFX_MAG44_FIREa"/>
+			<FireRapid name="SFX_MAG44_FIRE"/>
+			<FireRapid name="SFX_MAG44_FIREa"/>
+		</Sounds>
+	</Firearm>
+
+	<Firearm name="Mark 23 Pistol" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="15" tooltip="@firearm_mark_23_pistol_name">
+		<Class value="Pointman"/>
+		<Class value="Assaulter"/>
+		<Class value="Breacher"/>
+		<Class value="Stealth"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="0" turnSpeedLocalModifierPercent="0"/>
+		<RenderObject2D texture="data/textures/gui/customization/items/mk23.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="pistol"/>
+		<Description value="@firearm_mark_23_pistol_desc"/>
+
+		<ModifiableParams
+			muzzleDropDistanceMeters="0.466"
+			numPellets="1"
+			roundsPerMagazine="12"
+			roundsPerSecond="5.0"
+			damagePerBullet="12"
+			armorPiercingLevel="2"
+			spreadAt10Meters="0.11"
+			silenced="0"
+			shotSoundMeters="20"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1300"
+			reloadEmptyTime="1800"
+			changeInTime="800"
+			changeOutTime="700"
+			readyTime="100"
+			guardTime="50"
+		/>		<Params
+			caliberInfoText="@firearm_caliber_45acp_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+		/>
+
+		<AttackTypes>
+			<AttackType name="SWAT_EmergencyFireMark23"/>
+			<AttackType name="SWAT_DoubleTapMark23"/>
+			<AttackType name="SWAT_ControlledPairMark23"/>
+			<AttackType name="SWAT_MozambiqueMark23"/>
+			<AttackType name="SWAT_MozambiqueLongMark23"/>
+			<AttackType name="SWAT_PistolAimedFireShortMark23"/>
+			<AttackType name="SWAT_PistolAimedFireMark23"/>
+			<AttackType name="SWAT_PistolAimedFireLongMark23"/>
+			<AttackType name="SWAT_PistolAimedFireLongMark23XX"/>
+		</AttackTypes>
+
+		<MuzzleFlash muzzlePointOffset="21 -4" textureAnimation="ANIM_FX_MUZZLE_FLASH_1911">
+			<BulletTrace durationMSec="550">
+				<RenderObject2D texture="data/textures/fx/bullet_trace.dds" sizeX="512" sizeY="8" blendMode="add_masked"/>
+			</BulletTrace>
+			<Flares>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare1.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare2.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare3.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+			</Flares>
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="SFX_1911_EQUIP"/>
+			<Unequip name="SFX_1911_UNEQP"/>
+			<Reload name="SFX_1911_RELD"/>
+			<ReloadEmpty name="SFX_1911_RELDEMPT"/>
+			<FireSingle name="SFX_MK23_FIRE"/>
+			<FireSingle name="SFX_MK23_FIREa"/>
+			<FireRapid name="SFX_MK23_FIRE"/>
+			<FireRapid name="SFX_MK23_FIREa"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPa"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPb"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPe"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPf"/>
+		</Sounds>
+	</Firearm>
+
+	<Firearm name="Mark 23-SD Pistol" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="20" tooltip="@firearm_mark_23sd_pistol_name">
+		<Class value="Pointman"/>
+		<Class value="Assaulter"/>
+		<Class value="Breacher"/>
+		<Class value="Stealth"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="0" turnSpeedLocalModifierPercent="0"/>
+		<RenderObject2D texture="data/textures/gui/customization/items/mk23sd.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="pistol"/>
+		<Description value="@firearm_mark_23sd_pistol_desc"/>
+
+		<ModifiableParams
+			muzzleDropDistanceMeters="0.636"
+			numPellets="1"
+			roundsPerMagazine="12"
+			roundsPerSecond="5.0"
+			damagePerBullet="12"
+			armorPiercingLevel="2"
+			spreadAt10Meters="0.11"
+			silenced="1"
+			shotSoundMeters="6"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1600"
+			reloadEmptyTime="2200"
+			changeInTime="1300"
+			changeOutTime="1300"
+			readyTime="130"
+			guardTime="50"
+		/>		<Params
+			caliberInfoText="@firearm_caliber_45acp_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+		/>
+
+		<AttackTypes>
+			<AttackType name="SWAT_EmergencyFireMark23"/>
+			<AttackType name="SWAT_DoubleTapMark23"/>
+			<AttackType name="SWAT_ControlledPairMark23"/>
+			<AttackType name="SWAT_MozambiqueMark23"/>
+			<AttackType name="SWAT_MozambiqueLongMark23"/>
+			<AttackType name="SWAT_PistolAimedFireShortMark23"/>
+			<AttackType name="SWAT_PistolAimedFireMark23"/>
+			<AttackType name="SWAT_PistolAimedFireLongMark23"/>
+			<AttackType name="SWAT_PistolAimedFireLongMark23XX"/>
+		</AttackTypes>
+
+		<MuzzleFlash muzzlePointOffset="21 -4" textureAnimation="ANIM_FX_MUZZLE_FLASH_SUPPRESSED">
+			<BulletTrace durationMSec="550">
+				<RenderObject2D texture="data/textures/fx/bullet_trace.dds" sizeX="512" sizeY="8" blendMode="add_masked"/>
+			</BulletTrace>
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="SFX_1911_EQUIP"/>
+			<Unequip name="SFX_1911_UNEQP"/>
+			<Reload name="SFX_1911_RELD"/>
+			<ReloadEmpty name="SFX_1911_RELDEMPT"/>
+			<FireSingle name="SFX_MK23SD_FIRE"/>
+			<FireSingle name="SFX_MK23SD_FIREa"/>
+			<FireRapid name="SFX_MK23SD_FIRE"/>
+			<FireRapid name="SFX_MK23SD_FIREa"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPa"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPb"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPe"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPf"/>
+		</Sounds>
+	</Firearm>
+
+	<Firearm name="Mp7 PDW" inventoryBinding="PrimaryWeapon" category="rifle" unlockCost="10" tooltip="@firearm_mp7_pdw_name">
+		<Class value="Assaulter"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="-9" turnSpeedLocalModifierPercent="0"/>
+		<RenderObject2D texture="data/textures/gui/customization/items/mp7.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="rifle"/>
+		<Description value="@firearm_mp7_pdw_desc"/>
+
+
+		<ModifiableParams
+			muzzleDropDistanceMeters="0.613"
+			numPellets="1"
+			roundsPerMagazine="40"
+			roundsPerSecond="15.8"
+			damagePerBullet="9"
+			armorPiercingLevel="5"
+			spreadAt10Meters="0.1"
+			silenced="0"
+			shotSoundMeters="20"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="2000"
+			reloadEmptyTime="2300"
+			changeInTime="300"
+			changeOutTime="80"
+			readyTime="250"
+			guardTime="80"
+		/>		<Params
+			caliberInfoText="@firearm_caliber_46x30_name"
+			operationInfoText="@firearm_operation_fullauto_name"
+		/>
+
+		<AttackTypes>
+			<AttackType name="SWAT_MP7FullAuto"/>
+			<AttackType name="SWAT_MP7RapidFire"/>
+			<AttackType name="SWAT_MP7AimedFire"/>
+			<AttackType name="SWAT_MP7AimedFireLong"/>
+			<AttackType name="SWAT_MP7AimedFireLongXX"/>
+		</AttackTypes>
+
+		<MuzzleFlash muzzlePointOffset="28 -6" textureAnimation="ANIM_FX_MUZZLE_FLASH_M4">
+			<BulletTrace durationMSec="550">
+				<RenderObject2D texture="data/textures/fx/bullet_trace.dds" sizeX="512" sizeY="8" blendMode="add_masked"/>
+			</BulletTrace>
+			<Flares>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare1.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare2.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare3.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+			</Flares>
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="SFX_M4_EQUIP"/>
+			<Unequip name="SFX_M4_UNEQP"/>
+			<Reload name="SFX_1911_RELD"/>
+			<ReloadEmpty name="SFX_M4_RELDEMPT"/>
+			<FireSingle name="SFX_MP7_FIRE"/>
+			<FireSingle name="SFX_MP7_FIREa"/>
+			<FireRapid name="SFX_MP7_RAPID_FIRE"/>
+			<FireRapid name="SFX_MP7_RAPID_FIREa"/>
+			<ShellDrop name="SFX_RIFLE_SHELL_DROPa"/>
+			<ShellDrop name="SFX_RIFLE_SHELL_DROPb"/>
+			<ShellDrop name="SFX_RIFLE_SHELL_DROPc"/>
+			<ShellDrop name="SFX_RIFLE_SHELL_DROPd"/>
+		</Sounds>
+	</Firearm>
+
+	<Firearm name="Evo 3 SMG" inventoryBinding="PrimaryWeapon" category="rifle" unlockCost="4" tooltip="@firearm_evo_3_smg_name">
+		<Class value="Assaulter"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="-13" turnSpeedLocalModifierPercent="0"/>
+		<RenderObject2D texture="data/textures/gui/customization/items/evo3.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="rifle"/>
+		<Description value="@firearm_evo_3_smg_desc"/>
+
+		<ModifiableParams
+			muzzleDropDistanceMeters="0.63"
+			numPellets="1"
+			roundsPerMagazine="30"
+			roundsPerSecond="19"
+			damagePerBullet="11"
+			armorPiercingLevel="4"
+			spreadAt10Meters="0.3"
+			silenced="0"
+			shotSoundMeters="20"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="2200"
+			reloadEmptyTime="3200"
+			changeInTime="300"
+			changeOutTime="80"
+			readyTime="250"
+			guardTime="80"
+		/>		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_fullauto3burst_name"
+		/>
+
+		<AttackTypes>
+			<AttackType name="SWAT_SMG3rdBurst"/>
+			<AttackType name="SWAT_SMGRapidFire"/>
+			<AttackType name="SWAT_SMGAimedFire"/>
+			<AttackType name="SWAT_SMGAimedFireLong"/>
+			<AttackType name="SWAT_SMGAimedFireLongXX"/>
+		</AttackTypes>
+
+		<MuzzleFlash muzzlePointOffset="28 -6" textureAnimation="ANIM_FX_MUZZLE_FLASH_M4">
+			<BulletTrace durationMSec="550">
+				<RenderObject2D texture="data/textures/fx/bullet_trace.dds" sizeX="512" sizeY="8" blendMode="add_masked"/>
+			</BulletTrace>
+			<Flares>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare1.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare2.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare3.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+			</Flares>
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="SFX_M4_EQUIP"/>
+			<Unequip name="SFX_M4_UNEQP"/>
+			<Reload name="SFX_1911_RELD"/>
+			<ReloadEmpty name="SFX_M4_RELDEMPT"/>
+			<FireSingle name="SFX_EVO3_FIRE"/>
+			<FireSingle name="SFX_EVO3_FIREa"/>
+			<FireRapid name="SFX_EVO3_RAPID_FIRE"/>
+			<FireRapid name="SFX_EVO3_RAPID_FIREa"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPa"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPb"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPc"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPd"/>
+		</Sounds>
+	</Firearm>
+
+
+	<Firearm name="Vector SMG" inventoryBinding="PrimaryWeapon" category="rifle" unlockCost="25" tooltip="@firearm_vector_smg_name">
+		<Class value="Assaulter"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="-13" turnSpeedLocalModifierPercent="0"/>
+		<RenderObject2D texture="data/textures/gui/customization/items/vector.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="rifle"/>
+		<Description value="@firearm_vector_smg_desc"/>
+
+		<ModifiableParams
+			muzzleDropDistanceMeters="0.595"
+			numPellets="1"
+			roundsPerMagazine="25"
+			roundsPerSecond="20"
+			damagePerBullet="12"
+			armorPiercingLevel="3"
+			spreadAt10Meters="0.26"
+			silenced="0"
+			shotSoundMeters="20"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="2400"
+			reloadEmptyTime="2700"
+			changeInTime="300"
+			changeOutTime="80"
+			readyTime="250"
+			guardTime="80"
+		/>		<Params
+			caliberInfoText="@firearm_caliber_45acp_name"
+			operationInfoText="@firearm_operation_fullauto2burst_name"
+		/>
+
+		<AttackTypes>
+			<AttackType name="SWAT_Vector2rdBurst"/>
+			<AttackType name="SWAT_VectorRangedBurst"/>
+			<AttackType name="SWAT_VectorAimedFire"/>
+			<AttackType name="SWAT_VectorAimedFireLong"/>
+			<AttackType name="SWAT_VectorAimedFireLongXX"/>
+		</AttackTypes>
+
+		<MuzzleFlash muzzlePointOffset="28 -6" textureAnimation="ANIM_FX_MUZZLE_FLASH_M4">
+			<BulletTrace durationMSec="550">
+				<RenderObject2D texture="data/textures/fx/bullet_trace.dds" sizeX="512" sizeY="8" blendMode="add_masked"/>
+			</BulletTrace>
+			<Flares>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare1.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare2.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare3.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+			</Flares>
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="SFX_M4_EQUIP"/>
+			<Unequip name="SFX_M4_UNEQP"/>
+			<Reload name="SFX_1911_RELD"/>
+			<ReloadEmpty name="SFX_M4_RELDEMPT"/>
+			<FireSingle name="SFX_VECTOR_FIRE"/>
+			<FireSingle name="SFX_VECTOR_FIREa"/>
+			<FireRapid name="SFX_VECTOR_RAPID_FIRE"/>
+			<FireRapid name="SFX_VECTOR_RAPID_FIREa"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPa"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPb"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPc"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPd"/>
+		</Sounds>
+	</Firearm>
+
+	<Firearm name="Vector-SD SMG" inventoryBinding="PrimaryWeapon" category="rifle" unlockCost="25" tooltip="@firearm_vectorsd_smg_name">
+		<Class value="Stealth"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="-14" turnSpeedLocalModifierPercent="0"/>
+		<RenderObject2D texture="data/textures/gui/customization/items/vectorsd.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="rifle"/>
+		<Description value="@firearm_vectorsd_smg_desc"/>
+
+		<ModifiableParams
+			muzzleDropDistanceMeters="0.77"
+			numPellets="1"
+			roundsPerMagazine="25"
+			roundsPerSecond="20"
+			damagePerBullet="12"
+			armorPiercingLevel="3"
+			spreadAt10Meters="0.26"
+			silenced="1"
+			shotSoundMeters="4"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="2400"
+			reloadEmptyTime="2700"
+			changeInTime="300"
+			changeOutTime="80"
+			readyTime="350"
+			guardTime="80"
+		/>		<Params
+			caliberInfoText="@firearm_caliber_45acp_name"
+			operationInfoText="@firearm_operation_fullauto2burst_name"
+		/>
+
+		<AttackTypes>
+			<AttackType name="SWAT_Vector2rdBurst"/>
+			<AttackType name="SWAT_VectorRangedBurst"/>
+			<AttackType name="SWAT_VectorAimedFire"/>
+			<AttackType name="SWAT_VectorAimedFireLong"/>
+			<AttackType name="SWAT_VectorAimedFireLongXX"/>
+		</AttackTypes>
+
+		<MuzzleFlash muzzlePointOffset="14 -6" textureAnimation="ANIM_FX_MUZZLE_FLASH_SUPPRESSED">
+			<BulletTrace durationMSec="550">
+				<RenderObject2D texture="data/textures/fx/bullet_trace.dds" sizeX="512" sizeY="8" blendMode="add_masked"/>
+			</BulletTrace>
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="SFX_M4_EQUIP"/>
+			<Unequip name="SFX_M4_UNEQP"/>
+			<Reload name="SFX_1911_RELD"/>
+			<ReloadEmpty name="SFX_M4_RELDEMPT"/>
+			<FireSingle name="SFX_VECTORSD_FIRE"/>
+			<FireSingle name="SFX_VECTORSD_FIREa"/>
+			<FireRapid name="SFX_VECTORSD_FIRE"/>
+			<FireRapid name="SFX_VECTORSD_FIREa"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPa"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPb"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPc"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPd"/>
+		</Sounds>
+	</Firearm>
+
+	<Firearm name="Bren A1 Assault Rifle" inventoryBinding="PrimaryWeapon" category="rifle" unlockCost="4" tooltip="@firearm_bren_a1_assault_rifle_name">
+		<Class value="Assaulter"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="-14" turnSpeedLocalModifierPercent="0"/>
+		<RenderObject2D texture="data/textures/gui/customization/items/brenA1.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="rifle"/>
+		<Description value="@firearm_bren_a1_assault_rifle_desc"/>
+
+		<ModifiableParams
+			muzzleDropDistanceMeters="0.88"
+			numPellets="1"
+			roundsPerMagazine="30"
+			roundsPerSecond="6"
+			damagePerBullet="13"
+			armorPiercingLevel="5"
+			spreadAt10Meters="0.08"
+			silenced="0"
+			shotSoundMeters="20"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="2000"
+			reloadEmptyTime="2700"
+			changeInTime="300"
+			changeOutTime="80"
+			readyTime="250"
+			guardTime="80"
+		/>		<Params
+			caliberInfoText="@firearm_caliber_556x45_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+		/>
+
+		<AttackTypes>
+			<AttackType name="SWAT_BrenRapidFire"/>
+			<AttackType name="SWAT_BrenRapidFireMed"/>
+			<AttackType name="SWAT_BrenAimedFire"/>
+			<AttackType name="SWAT_BrenAimedFireXX"/>
+		</AttackTypes>
+
+		<MuzzleFlash muzzlePointOffset="28 -6" textureAnimation="ANIM_FX_MUZZLE_FLASH_M4">
+			<BulletTrace durationMSec="550">
+				<RenderObject2D texture="data/textures/fx/bullet_trace.dds" sizeX="512" sizeY="8" blendMode="add_masked"/>
+			</BulletTrace>
+			<Flares>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare1.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare2.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare3.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+			</Flares>
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="SFX_M4_EQUIP"/>
+			<Unequip name="SFX_M4_UNEQP"/>
+			<Reload name="SFX_1911_RELD"/>
+			<ReloadEmpty name="SFX_MP5SD_RELDEMPT"/>
+			<FireSingle name="SFX_BREN805_FIRE"/>
+			<FireSingle name="SFX_BREN805_FIREa"/>
+			<FireRapid name="SFX_BREN805_RAPID_FIRE"/>
+			<FireRapid name="SFX_BREN805_RAPID_FIREa"/>
+			<ShellDrop name="SFX_RIFLE_SHELL_DROPa"/>
+			<ShellDrop name="SFX_RIFLE_SHELL_DROPb"/>
+			<ShellDrop name="SFX_RIFLE_SHELL_DROPc"/>
+			<ShellDrop name="SFX_RIFLE_SHELL_DROPe"/>
+		</Sounds>
+	</Firearm>
+
+	<Firearm name="FAL Mini OSW (Auto / 7.62mm)" inventoryBinding="PrimaryWeapon" category="rifle" tooltip="@firearm_fal_mini_osw_name">
+		<Class value="AssaultEnemy"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="-13" turnSpeedLocalModifierPercent="0"/>
+		<RenderObject2D texture="data/textures/gui/customization/items/m4.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="rifle"/>
+
+		<ModifiableParams
+			muzzleDropDistanceMeters="0.8"
+			numPellets="1"
+			roundsPerMagazine="20"
+			roundsPerSecond="14"
+			damagePerBullet="14"
+			armorPiercingLevel="5"
+			spreadAt10Meters="0.2"
+			silenced="0"
+			shotSoundMeters="30"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1800"
+			reloadEmptyTime="2500"
+			changeInTime="400"
+			changeOutTime="100"
+			readyTime="270"
+			guardTime="80"
+
+
+		/>		<Params
+			caliberInfoText="@firearm_caliber_762x51_name"
+			operationInfoText="@firearm_operation_fullauto_name"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Operator_Auto"/>
+			<AttackType name="Operator_Burst"/>
+			<AttackType name="Operator_AimedBurst"/>
+			<AttackType name="Operator_AimedBurstLong"/>
+		</AttackTypes>
+
+		<MuzzleFlash muzzlePointOffset="28 -6" textureAnimation="ANIM_FX_MUZZLE_FLASH_M4">
+			<BulletTrace durationMSec="550">
+				<RenderObject2D texture="data/textures/fx/bullet_trace.dds" sizeX="512" sizeY="8" blendMode="add_masked"/>
+			</BulletTrace>
+			<Flares>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare1.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare2.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare3.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+			</Flares>
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="SFX_M4_EQUIP"/>
+			<Unequip name="SFX_M4_UNEQP"/>
+			<Reload name="SFX_1911_RELD"/>
+			<ReloadEmpty name="SFX_M4_RELDEMPT"/>
+			<FireSingle name="SFX_OSW_FIRE"/>
+			<FireSingle name="SFX_OSW_FIREa"/>
+			<FireRapid name="SFX_OSW_RAPID_FIRE"/>
+			<FireRapid name="SFX_OSW_RAPID_FIREa"/>
+		</Sounds>
+	</Firearm>
+
+	<Firearm name="Test Grenade Launcher" inventoryBinding="PrimaryWeapon" category="rifle" tooltip="Test Grenade Launcher">
+		<!-- <Class value="Assaulter"/> -->
+		<MobilityModifiers moveSpeedLocalModifierPercent="-13" turnSpeedLocalModifierPercent="0"/>
+		<RenderObject2D texture="data/textures/gui/customization/items/mp5.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="rifle"/>
+		<Description value=""/>
+
+		<ModifiableParams
+			muzzleDropDistanceMeters="0.675"
+			numPellets="1"
+			roundsPerMagazine="30"
+			roundsPerSecond="13"
+			damagePerBullet="11"
+			armorPiercingLevel="4"
+			spreadAt10Meters="2.0"
+			silenced="0"
+			shotSoundMeters="20"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="2200"
+			reloadEmptyTime="3200"
+			changeInTime="300"
+			changeOutTime="80"
+			readyTime="250"
+			guardTime="80"
+		/>
+
+		<Params
+			caliberInfoText=""
+			operationInfoText=""
+		/>
+
+		<AttackTypes>
+			<AttackType name="SWAT_TestGrenadeLauncher"/>
+		</AttackTypes>
+
+		<MuzzleFlash muzzlePointOffset="28 -6" textureAnimation="ANIM_FX_MUZZLE_FLASH_M4">
+			<BulletTrace durationMSec="550">
+				<RenderObject2D texture="data/textures/fx/bullet_trace.dds" sizeX="512" sizeY="8" blendMode="add_masked"/>
+			</BulletTrace>
+			<Flares>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare1.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare2.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare3.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+			</Flares>
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="SFX_M4_EQUIP"/>
+			<Unequip name="SFX_M4_UNEQP"/>
+			<Reload name="SFX_1911_RELD"/>
+			<ReloadEmpty name="SFX_MP5SD_RELDEMPT"/>
+			<FireSingle name="SFX_MP5A3_FIRE"/>
+			<FireSingle name="SFX_MP5A3_FIREa"/>
+			<FireRapid name="SFX_MP5A3_RAPID_FIRE"/>
+			<FireRapid name="SFX_MP5A3_RAPID_FIREa"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPa"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPb"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPc"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPd"/>
+		</Sounds>
+
+		<!--
+			If Projectile is not defined, it will behave like a standard firearm.
+			The parameters are the same as for grenades.
+			The projectile's collision size is 1 (point-sized). Keep them small enough so that it won't get noticed.
+
+			"rotationSpeed" to rotate the projectile in flight
+			"mass" usually left to 1.0, not fully working. controls the speed at which your projectile lands, so decrease it if it lands too early.
+			"numShrapnel" if 0, the projectile will apply area effects everywhere around it. otherwise it will split in the given number of shrapnels, each doing the defined effect.
+
+			"initialVelocity" is given in meters per second. When <0, the launch speed/angle of the projectile will be automatically calculated so that it lands near the target.
+			"minTimeToExplode" only taken into account for initialVelocity<0, otherwise the explosion time is calculated automatically based on the time it takes to reach the target.
+
+			"triggerOnImpact" is used for detonating when the projectile hits something. otherwise it will bounce
+		-->
+		<Projectile
+			bodyEntityName="TestGrenadeLauncherProjectileBody"
+			explosionSound="SFX_STINGER_EXPL"
+
+			rotationSpeed="0.1"
+			mass="1.0"
+			numShrapnel="70"
+
+			initialVelocity="-1"
+			minTimeToExplode="1000"
+
+			triggerOnImpact="false"
+			friendlyFire="true">
+
+			<FX
+				explosionAnimation="ANIM_FX_STINGER_EXPLODE"
+				burnMarkEntity="BurnMark1"
+				shrapnelEntity="GrenadeShrapnel">
+
+				<!--
+				<Dust durationMsec="15000" animation="ANIM_FX_GRENADE_DUST"/>
+
+				<Nova durationMsec="1000">
+					<RenderObject2D texture="data/textures/fx/flashbang_nova.tga" layer="30" blendMode="add"/>
+				</Nova>
+				-->
+
+				<Distort durationMsec="200">
+					<RenderObject2D texture="data/textures/fx/flashbang_distort.tga" layer="30"/>
+				</Distort>
+			</FX>
+
+			<EffectRange radiusMeters="3">
+				<StunEffect chancePercent="0" innerRangeTimeMSec="0" outerRangeTimeMSec="0"/>
+				<DamageEffect chancePercent="100" damage="11" armorPiercingLevel="4"/>
+				<ScatterEffect chancePercent="0" rangeMeters="0.0" armorPiercingLevel="0"/>
+			</EffectRange>
+		</Projectile>
+	</Firearm>
+
+	<Firearm name="Test Bow" inventoryBinding="PrimaryWeapon" category="rifle" tooltip="Test Bow">
+		<!-- <Class value="Assaulter"/> -->
+		<MobilityModifiers moveSpeedLocalModifierPercent="-13" turnSpeedLocalModifierPercent="0"/>
+		<RenderObject2D texture="data/textures/gui/customization/items/mp5.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="rifle"/>
+		<Description value=""/>
+
+		<ModifiableParams
+			muzzleDropDistanceMeters="0.675"
+			numPellets="1"
+			roundsPerMagazine="30"
+			roundsPerSecond="13"
+			damagePerBullet="11"
+			armorPiercingLevel="4"
+			spreadAt10Meters="0.5"
+			silenced="0"
+			shotSoundMeters="20"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="2200"
+			reloadEmptyTime="3200"
+			changeInTime="300"
+			changeOutTime="80"
+			readyTime="250"
+			guardTime="80"
+		/>
+
+		<Params
+			caliberInfoText=""
+			operationInfoText=""
+		/>
+
+		<AttackTypes>
+			<AttackType name="SWAT_TestGrenadeLauncher"/>
+		</AttackTypes>
+
+		<MuzzleFlash muzzlePointOffset="28 -6" textureAnimation="ANIM_FX_MUZZLE_FLASH_M4">
+			<BulletTrace durationMSec="550">
+				<RenderObject2D texture="data/textures/fx/bullet_trace.dds" sizeX="512" sizeY="8" blendMode="add_masked"/>
+			</BulletTrace>
+			<Flares>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare1.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare2.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+				<RenderObject2D texture="data/textures/fx/muzzle_flash_flare3.tga" sizeX="200" sizeY="200" layer="11" blendMode="add"/>
+			</Flares>
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="SFX_M4_EQUIP"/>
+			<Unequip name="SFX_M4_UNEQP"/>
+			<Reload name="SFX_1911_RELD"/>
+			<ReloadEmpty name="SFX_MP5SD_RELDEMPT"/>
+			<FireSingle name="SFX_MP5A3_FIRE"/>
+			<FireSingle name="SFX_MP5A3_FIREa"/>
+			<FireRapid name="SFX_MP5A3_RAPID_FIRE"/>
+			<FireRapid name="SFX_MP5A3_RAPID_FIREa"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPa"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPb"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPc"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPd"/>
+		</Sounds>
+
+		<Projectile
+			bodyEntityName="TestBowProjectileBody"
+			explosionSound="SFX_FLASH_WALL"
+
+			rotationSpeed="0"
+			mass="0.2"
+			numShrapnel="0"
+
+			initialVelocity="15"
+			minTimeToExplode="0"
+
+			triggerOnImpact="true"
+			friendlyFire="false">
+
+			<FX
+				explosionAnimation="ANIM_FX_BULLET_IMPACT_METAL"
+				burnMarkEntity=""
+				shrapnelEntity="">
+
+				<!--
+				<Dust durationMsec="15000" animation="ANIM_FX_GRENADE_DUST"/>
+
+				<Nova durationMsec="1000">
+					<RenderObject2D texture="data/textures/fx/flashbang_nova.tga" layer="30" blendMode="add"/>
+				</Nova>
+
+				<Distort durationMsec="200">
+					<RenderObject2D texture="data/textures/fx/flashbang_distort.tga" layer="30"/>
+				</Distort>
+				-->
+			</FX>
+
+			<EffectRange radiusMeters="0.6">
+				<StunEffect chancePercent="0" innerRangeTimeMSec="0" outerRangeTimeMSec="0"/>
+				<DamageEffect chancePercent="100" damage="11" armorPiercingLevel="4"/>
+				<ScatterEffect chancePercent="0" rangeMeters="0.0" armorPiercingLevel="0"/>
+			</EffectRange>
+		</Projectile>
+	</Firearm>
+</Equipment>

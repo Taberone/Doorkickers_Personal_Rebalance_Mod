@@ -1,0 +1,538 @@
+<!-- all time settings are in milliseconds, unless name says otherwise -->
+<Equipment>
+	<Grenade name="Flashbang" inventoryBinding="UtilityPouch" quantity="2" tooltip="@grenade_flashbang_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/fbang01.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<Description value="@grenade_flashbang_desc"/>
+		<Class value="Pointman"/>
+		<Class value="Assaulter"/>
+		<Class value="Breacher"/>
+		<Class value="Stealth"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="0" turnSpeedLocalModifierPercent="0"/>
+
+		<!--
+		-the effectRange Radius does not contain the previous one, so the total effect range = radius1+radius2+...+radiusN
+		-explosion time is adjusted automatically depending on the distance to target, but have a minimum explosion time
+		-if "numShrapnel" != 0 the grenade does not do instant damage, instead uses the shrapnel to apply each effect for proper range
+		-->
+		<ModifiableParams
+			throwTime="1000"
+		/>
+
+		<Parameters
+			bodyEntityName="FlashbangBody"
+			targetEntityName="FlashbangTarget"
+			pathIconTexture="data/textures/gui/contextual/pathicon_flashbang_active.tga"
+			explosionSound="SFX_FLASH_EXPL"
+			numShrapnel="0"
+			rotationSpeed="0.1"
+			minTimeToExplode="650"
+			friendlyFire="false"
+			triggerOnImpact="false">
+
+			<!-- burn marks are randomly rotated/scaled for diversity -->
+			<FX
+				explosionAnimation=""
+				burnMarkEntity="BurnMark1"
+				shrapnelEntity="">
+
+				<Dust durationMsec="15000" animation="ANIM_FX_GRENADE_DUST"/>
+
+				<Nova durationMsec="1000">
+					<RenderObject2D texture="data/textures/fx/flashbang_nova.tga" layer="30" blendMode="add"/>
+				</Nova>
+
+				<Distort durationMsec="200">
+					<RenderObject2D texture="data/textures/fx/flashbang_distort.tga" layer="30"/>
+				</Distort>
+			</FX>
+
+			<EffectRange radiusMeters="2">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="3000" outerRangeTimeMSec="3000"/>
+				<DamageEffect chancePercent="0" damage="0" armorPiercingLevel="0"/>
+				<ScatterEffect chancePercent="0" rangeMeters="0" armorPiercingLevel="0"/>
+			</EffectRange>
+
+			<EffectRange radiusMeters="1.5">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="3000" outerRangeTimeMSec="750"/>
+				<DamageEffect chancePercent="0" damage="0" armorPiercingLevel="0"/>
+				<ScatterEffect chancePercent="0" rangeMeters="0" armorPiercingLevel="0"/>
+			</EffectRange>
+		</Parameters>
+	</Grenade>
+
+	<Grenade name="Stinger" inventoryBinding="UtilityPouch" quantity="2" unlockCost="5" tooltip="@grenade_stinger_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/stinger.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<Description value="@grenade_stinger_desc"/>
+		<Class value="Pointman"/>
+		<Class value="Assaulter"/>
+		<Class value="Breacher"/>
+		<Class value="Stealth"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="0" turnSpeedLocalModifierPercent="0"/>
+
+		<ModifiableParams
+			throwTime="1000"
+		/>
+
+		<Parameters
+			bodyEntityName="StingerBody"
+			targetEntityName="StingerTarget"
+			pathIconTexture="data/textures/gui/contextual/pathicon_stinger_active.tga"
+			explosionSound="SFX_STINGER_EXPL"
+			numShrapnel="70"
+			rotationSpeed="0.1"
+			minTimeToExplode="650"
+			friendlyFire="true"
+			triggerOnImpact="false">
+
+			<!-- burn marks are randomly rotated/scaled for diversity -->
+			<FX
+				explosionAnimation="ANIM_FX_STINGER_EXPLODE"
+				burnMarkEntity="BurnMark1"
+				shrapnelEntity="GrenadeShrapnel">
+				<Dust durationMsec="15000" animation="ANIM_FX_GRENADE_DUST"/>
+				<Nova/>
+				<Distort/>
+			</FX>
+
+			<EffectRange radiusMeters="1"> <!-- 100% chance to stun, Damage increased to 3 -->
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="3" armorPiercingLevel="0"/>
+				<ScatterEffect chancePercent="0" rangeMeters="0" armorPiercingLevel="0"/>
+			</EffectRange>
+
+			<EffectRange radiusMeters="4"> <!-- rangeMeters increased to 4 -->
+				<StunEffect chancePercent="0" innerRangeTimeMSec="0" outerRangeTimeMSec="0"/>
+				<DamageEffect chancePercent="0" damage="0" armorPiercingLevel="0"/>
+				<ScatterEffect chancePercent="100" rangeMeters="4" armorPiercingLevel="0"/>
+			</EffectRange>
+		</Parameters>
+	</Grenade>
+
+	<Grenade name="Frag Grenade" inventoryBinding="UtilityPouch" quantity="2" tooltip="@grenade_frag_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/stinger.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<Description value="@grenade_stinger_desc"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="0" turnSpeedLocalModifierPercent="0"/>
+
+		<ModifiableParams
+			throwTime="1000"
+		/>
+
+		<Parameters
+			bodyEntityName="StingerBody"
+			targetEntityName="StingerTarget"
+			pathIconTexture="data/textures/gui/contextual/pathicon_stinger_active.tga"
+			explosionSound="SFX_STINGER_EXPL"
+			numShrapnel="70"
+			rotationSpeed="0.1"
+			minTimeToExplode="1000"
+			friendlyFire="true"
+			triggerOnImpact="false">
+
+			<!-- burn marks are randomly rotated/scaled for diversity -->
+			<FX
+				explosionAnimation="ANIM_FX_FRAGGRENADE_EXPLODE"
+				burnMarkEntity="BurnMark1"
+				shrapnelEntity="GrenadeShrapnel">
+				<Dust durationMsec="15000" animation="ANIM_FX_GRENADE_DUST"/>
+				<Nova durationMsec="100">
+					<RenderObject2D texture="data/textures/fx/flashbang_nova.tga" layer="30" blendMode="add"/>
+				</Nova>
+				<Distort durationMsec="150">
+					<RenderObject2D texture="data/textures/fx/flashbang_distort.tga" layer="30"/>
+				</Distort>
+			</FX>
+
+			<EffectRange radiusMeters="2">
+				<StunEffect chancePercent="0" innerRangeTimeMSec="0" outerRangeTimeMSec="0"/>
+				<DamageEffect chancePercent="100" damage="7" armorPiercingLevel="4"/>
+				<ScatterEffect chancePercent="100" rangeMeters="3.5" armorPiercingLevel="3"/>
+			</EffectRange>
+		</Parameters>
+	</Grenade>
+
+
+	<BreachingCharge name="Breaching Charge" inventoryBinding="UtilityPouch" quantity="2" tooltip="@breaching_charge_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/bcharge.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<Description value="@breaching_charge_desc"/>
+
+		<!-- area2 size does not contain area1 -->
+		<ModifiableParams
+			deployTime="6000"
+
+			area1HeightMeters="4"
+			area1WidthMeters="2"
+			area1Damage="12"
+			area1StunTime="3000"
+
+			area2HeightMeters="2"
+			area2WidthMeters="2"
+			area2Damage="8"
+			area2StunTime="2000"
+		/>
+
+		<Parameters explosionSound="SFX_CHARGE_EXPL">
+
+			<!-- burn marks are randomly rotated/scaled for diversity -->
+			<FX
+				explosionAnimation="ANIM_FX_DOOR_EXPLOSION"
+				debrisAnimation="ANIM_FX_DOOR_EXPLODE_DEBRIS"
+				burnMarkEntity="BurnMark1"
+				shrapnelEntity="GrenadeShrapnel">
+
+				<Distort durationMsec="250">
+					<RenderObject2D texture="data/textures/fx/door_explosion_distort.tga" layer="30" scaleX="0.85" scaleY="0.6"/>
+				</Distort>
+			</FX>
+		</Parameters>
+
+		<Class value="Pointman"/>
+		<Class value="Assaulter"/>
+		<Class value="Breacher"/>
+		<Class value="Stealth"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="0" turnSpeedLocalModifierPercent="0"/>
+	</BreachingCharge>
+
+	<!-- This is only used for min/max GUI stats, do not remove nor modify name -->
+	<Shield name="shieldWorstStats">
+		<MobilityModifiers moveSpeedLocalModifierPercent="-28" turnSpeedLocalModifierPercent="-100"/>
+		<Parameters>
+			<ProtectionArc degrees="20" coveragePercent="25" piercingProtectionLevel="4"/>
+			<FieldOfView degrees="25" eyeRadiusMeters="0.4" rangeMeters="99999"/>
+		</Parameters>
+	</Shield>
+
+	<!-- This is only used for min/max GUI stats, do not remove nor modify name -->
+	<Shield name="shieldBestStats">
+		<MobilityModifiers moveSpeedLocalModifierPercent="-16" turnSpeedLocalModifierPercent="-60"/>
+		<Parameters>
+			<ProtectionArc degrees="90" coveragePercent="95" piercingProtectionLevel="5"/>
+			<FieldOfView degrees="90" eyeRadiusMeters="0.4" rangeMeters="99999"/>
+		</Parameters>
+	</Shield>
+
+	<Shield name="Enforcer Shield (Level IIIA)" inventoryBinding="SupportGear" tooltip="@shield_enforcer_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/shield3.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<Description value="@shield_enforcer_desc"/>
+		<Class value="Shield"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="-18" turnSpeedLocalModifierPercent="-60"/>
+
+		<Parameters protectionInfoText="@equipment_protect1">
+			<ProtectionArc degrees="75" coveragePercent="75" piercingProtectionLevel="4"/>
+			<FieldOfView degrees="60" eyeRadiusMeters="0.4" rangeMeters="99999"/>
+			<Indicator_RenderObject texture="data/textures/fx/shield01.tga"/>
+		</Parameters>
+	</Shield>
+
+	<Shield name="Gunfighter Shield (Level IIIA)" inventoryBinding="SupportGear" unlockCost="5" tooltip="@shield_gunfighter_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/shield4.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<Description value="@shield_gunfighter_desc"/>
+		<Class value="Shield"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="-16" turnSpeedLocalModifierPercent="-50"/>
+
+		<Parameters protectionInfoText="@equipment_protect1">
+			<ProtectionArc degrees="68" coveragePercent="75" piercingProtectionLevel="4"/>
+			<FieldOfView degrees="75" eyeRadiusMeters="0.4" rangeMeters="99999"/>
+			<Indicator_RenderObject texture="data/textures/fx/shield01.tga"/>
+		</Parameters>
+	</Shield>
+
+	<Shield name="Bunker Shield (Level IIIA)" inventoryBinding="SupportGear" unlockCost="10" tooltip="@shield_bunker_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/shield.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<Description value="@shield_bunker_desc"/>
+		<Class value="Shield"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="-30" turnSpeedLocalModifierPercent="-100"/>
+
+		<!--
+		degrees: how wide around the trooper's origin the protection arc goes
+		coveragePercent: which percent of the bullets go through (they deal 1 damage if bullet piercing < protectionLevel or full damage otherwise)
+		piercingProtectionLevel: gets compared to the bullet's piercingLevel (recive 1 damage if > bulletPiercing and goes through CoveragePercent or normal damage otherwise)
+		FOVDegrees: while equipped, sets the FOV to this
+		-->
+		<Parameters protectionInfoText="@equipment_protect1">
+			<ProtectionArc degrees="90" coveragePercent="95" piercingProtectionLevel="4"/>
+			<FieldOfView degrees="55" eyeRadiusMeters="0.4" rangeMeters="99999"/>
+			<Indicator_RenderObject texture="data/textures/fx/shield01.tga"/>
+		</Parameters>
+	</Shield>
+
+
+	<Shield name="Assault Shield (Level III)" inventoryBinding="SupportGear" unlockCost="5" tooltip="@shield_assault_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/shield2.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<Description value="@shield_assault_desc"/>
+		<Class value="Shield"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="-16" turnSpeedLocalModifierPercent="-60"/>
+
+		<Parameters protectionInfoText="@equipment_protect2">
+			<ProtectionArc degrees="55" coveragePercent="60" piercingProtectionLevel="5"/>
+			<FieldOfView degrees="80" eyeRadiusMeters="0.4" rangeMeters="99999"/>
+			<Indicator_RenderObject texture="data/textures/fx/shield02.tga"/>
+		</Parameters>
+	</Shield>
+
+	<Shield name="Ironman Shield (Level III)" inventoryBinding="SupportGear" unlockCost="15" tooltip="@shield_ironman_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/shield5.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<Description value="@shield_ironman_desc"/>
+		<Class value="Shield"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="-22" turnSpeedLocalModifierPercent="-65"/>
+
+		<Parameters protectionInfoText="@equipment_protect2">
+			<ProtectionArc degrees="55" coveragePercent="80" piercingProtectionLevel="5"/>
+			<FieldOfView degrees="80" eyeRadiusMeters="0.4" rangeMeters="99999"/>
+			<Indicator_RenderObject texture="data/textures/fx/shield02.tga"/>
+		</Parameters>
+	</Shield>
+
+	<!-- This is only used for min/max GUI stats, do not remove nor modify name -->
+	<Armor name="armorWorstStats">
+		<MobilityModifiers moveSpeedLocalModifierPercent="-25" turnSpeedLocalModifierPercent="-25"/>
+		<Parameters>
+			<ProtectionArc degrees="75" coveragePercent="50" piercingProtectionLevel="0"/>
+			<ProtectionArc degrees="270" coveragePercent="0" piercingProtectionLevel="0"/>
+			<ProtectionArc degrees="360" coveragePercent="50" piercingProtectionLevel="0"/>
+		</Parameters>
+	</Armor>
+
+	<!-- This is only used for min/max GUI stats, do not remove nor modify name -->
+	<Armor name="armorBestStats">
+		<MobilityModifiers moveSpeedLocalModifierPercent="-2" turnSpeedLocalModifierPercent="0"/>
+		<Parameters>
+			<ProtectionArc degrees="90" coveragePercent="60" piercingProtectionLevel="5"/>
+			<ProtectionArc degrees="270" coveragePercent="60" piercingProtectionLevel="5"/>
+			<ProtectionArc degrees="360" coveragePercent="60" piercingProtectionLevel="5"/>
+		</Parameters>
+	</Armor>
+
+	<Armor name="No Armor" inventoryBinding="Armor" unlockCost="10" tooltip="@armor_no_armour_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/armor6.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<Class value="Shield"/>
+		<Description value="@armor_no_armour_desc"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="10" turnSpeedLocalModifierPercent="5"/>
+
+		<Parameters protectionInfoText="@equipment_protect0">
+			<ProtectionArc degrees="90" coveragePercent="100" piercingProtectionLevel="0"/>
+			<ProtectionArc degrees="270" coveragePercent="100" piercingProtectionLevel="0"/>
+			<ProtectionArc degrees="360" coveragePercent="100" piercingProtectionLevel="0"/>
+		</Parameters>
+	</Armor>
+
+	<Armor name="Low Threat Armor" inventoryBinding="Armor" tooltip="@armor_low_thread_armor_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/armor5.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<Class value="Pointman"/>
+		<Class value="Assaulter"/>
+		<Class value="Breacher"/>
+		<Class value="Stealth"/>
+		<Class value="Shield"/>
+		<Description value="@armor_low_thread_armor_desc"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="0" turnSpeedLocalModifierPercent="0"/>
+
+		<Parameters protectionInfoText="@equipment_protect1">
+			<ProtectionArc degrees="90" coveragePercent="40" piercingProtectionLevel="4"/>
+			<ProtectionArc degrees="270" coveragePercent="20" piercingProtectionLevel="4"/>
+			<ProtectionArc degrees="360" coveragePercent="40" piercingProtectionLevel="4"/>
+		</Parameters>
+	</Armor>
+
+	<Armor name="Assaulter Vest" inventoryBinding="Armor" unlockCost="10" tooltip="@armor_assaulter_vest_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/armor2.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<Class value="Pointman"/>
+		<Class value="Assaulter"/>
+		<Class value="Breacher"/>
+		<Class value="Stealth"/>
+		<Class value="Shield"/>
+		<Description value="@armor_assaulter_vest_desc"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="-10" turnSpeedLocalModifierPercent="-5"/>
+
+		<!--
+		protectionArcDegrees: how wide around the trooper's origin the protection arc goes
+		coveragePercent: which percent of the bullets go through (they deal 1 damage if bullet piercing < protectionLevel or full damage otherwise)
+		piercingProtectionLevel: gets compared to the bullet's piercingLevel (recive 1 damage if > bulletPiercing and goes through CoveragePercent or normal damage otherwise)
+		-->
+		<Parameters protectionInfoText="@equipment_protect2">
+			<ProtectionArc degrees="90" coveragePercent="40" piercingProtectionLevel="5"/>
+			<ProtectionArc degrees="270" coveragePercent="20" piercingProtectionLevel="4"/>
+			<ProtectionArc degrees="360" coveragePercent="40" piercingProtectionLevel="5"/>
+		</Parameters>
+	</Armor>
+
+	<Armor name="Extended Protection" inventoryBinding="Armor" unlockCost="20" tooltip="@armor_extended_protection_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/armor3.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<Class value="Pointman"/>
+		<Class value="Assaulter"/>
+		<Class value="Breacher"/>
+		<Class value="Stealth"/>
+		<Class value="Shield"/>
+		<Description value="@armor_extended_protection_desc"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="-23" turnSpeedLocalModifierPercent="-20"/>
+
+		<!--
+		protectionArcDegrees: how wide around the trooper's origin the protection arc goes
+		coveragePercent: which percent of the bullets go through (they deal 1 damage if bullet piercing < protectionLevel or full damage otherwise)
+		piercingProtectionLevel: gets compared to the bullet's piercingLevel (recive 1 damage if > bulletPiercing and goes through CoveragePercent or normal damage otherwise)
+		-->
+		<Parameters protectionInfoText="@equipment_protect2">
+			<ProtectionArc degrees="90" coveragePercent="60" piercingProtectionLevel="5"/>
+			<ProtectionArc degrees="270" coveragePercent="30" piercingProtectionLevel="5"/>
+			<ProtectionArc degrees="360" coveragePercent="45" piercingProtectionLevel="5"/>
+		</Parameters>
+	</Armor>
+
+	<Armor name="Raider Vest" inventoryBinding="Armor" unlockCost="10" tooltip="@armor_raider_vest_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/armor1.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<Class value="Pointman"/>
+		<Class value="Assaulter"/>
+		<Class value="Breacher"/>
+		<Class value="Stealth"/>
+		<Class value="Shield"/>
+		<Description value="@armor_raider_vest_desc"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="0" turnSpeedLocalModifierPercent="0"/>
+
+		<!--
+		protectionArcDegrees: how wide around the trooper's origin the protection arc goes. each arc's degrees includes the previous one.
+		coveragePercent: which percent of the bullets go through (they deal 1 damage if bullet piercing < protectionLevel or full damage otherwise)
+		piercingProtectionLevel: gets compared to the bullet's piercingLevel (recive 1 damage if > bulletPiercing and goes through CoveragePercent or normal damage otherwise)
+		-->
+		<Parameters protectionInfoText="@equipment_protect2">
+			<ProtectionArc degrees="90" coveragePercent="40" piercingProtectionLevel="5"/>
+			<ProtectionArc degrees="270" coveragePercent="100" piercingProtectionLevel="0"/>
+			<ProtectionArc degrees="360" coveragePercent="40" piercingProtectionLevel="5"/>
+		</Parameters>
+	</Armor>
+
+	<Armor name="Front Plate Only" inventoryBinding="Armor"unlockCost="15" tooltip="@armor_front_plate_only_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/armor4.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<Class value="Pointman"/>
+		<Class value="Assaulter"/>
+		<Class value="Breacher"/>
+		<Class value="Stealth"/>
+		<Description value="@armor_front_plate_only_desc"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="-5" turnSpeedLocalModifierPercent="-3"/>
+
+		<Parameters protectionInfoText="@equipment_protect2">
+			<ProtectionArc degrees="90" coveragePercent="40" piercingProtectionLevel="5"/>
+			<ProtectionArc degrees="270" coveragePercent="20" piercingProtectionLevel="4"/>
+			<ProtectionArc degrees="360" coveragePercent="40" piercingProtectionLevel="4"/>
+		</Parameters>
+	</Armor>
+
+	<Mirror name="Spy Camera" inventoryBinding="SupportGear1" tooltip="@support_gear_spy_camera_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/camera.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<ModifiableParams
+			fovDegrees="45"
+			changeInTime="1000"
+			changeOutTime="1000"
+		/>
+		<Class value="Pointman"/>
+		<Class value="Assaulter"/>
+		<Class value="Breacher"/>
+		<Class value="Stealth"/>
+		<Description value="@support_gear_spy_camera_desc"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="0" turnSpeedLocalModifierPercent="0"/>
+	</Mirror>
+
+	<Lockpick name="Lockpick" inventoryBinding="SupportGear" tooltip="@support_gear_lockpic_name">
+		<Skin binding="weaponless"/>
+
+		<!-- the efficiency percent is multiplied by the door's lockpick time to get the final lockpicking time -->
+		<ModifiableParams
+			efficiencyPercent="100"
+			changeInTime="1000"
+			changeOutTime="1000"
+		/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="0" turnSpeedLocalModifierPercent="0"/>
+	</Lockpick>
+
+	<LockpickMachine name="Lockpick Machine" inventoryBinding="UtilityPouch" unlockCost="10" tooltip="@utility_pouch_lockpick_machine_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/lockpickmachine.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<Class value="Pointman"/>
+		<Class value="Assaulter"/>
+		<Class value="Breacher"/>
+		<Class value="Stealth"/>
+		<Description value="@utility_pouch_lockpick_machine_desc"/>
+
+		<!-- the efficiency percent is multiplied by the door's lockpick time to get the final lockpicking time -->
+		<ModifiableParams
+			efficiencyPercent="300"
+			changeInTime="1000"
+			changeOutTime="1000"
+		/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="0" turnSpeedLocalModifierPercent="0"/>
+	</LockpickMachine>
+
+	<Crowbar name="Crowbar" inventoryBinding="SupportGear" tooltip="@support_gear_crowbar_name">
+		<Skin binding="weaponless"/>
+
+		<!-- the efficiency percent is multiplied by the door's breach time to get the final breaching time -->
+		<ModifiableParams
+			changeInTime="1000"
+			changeOutTime="1000"
+			efficiencyPercent="100"
+		/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="0" turnSpeedLocalModifierPercent="0"/>
+	</Crowbar>
+
+	<DynamicHammer name="Dynamic Hammer" inventoryBinding="SupportGear1" unlockCost="4" tooltip="@utility_dynamic_hammer_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/dynamichammer.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<Class value="Pointman"/>
+		<Class value="Assaulter"/>
+		<Class value="Stealth"/>
+		<Description value="@utility_dynamic_hammer_desc"/>
+
+		<!-- the efficiency percent is multiplied by the door's breach time to get the final breaching time -->
+		<ModifiableParams
+			changeInTime="2000"
+			changeOutTime="1000"
+		/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="-10" turnSpeedLocalModifierPercent="-3"/>
+	</DynamicHammer>
+
+	<BoltCutter name="Bolt Cutter" inventoryBinding="SupportGear1" unlockCost="4" tooltip="@utility_bolt_cutter_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/boltcutter.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<Class value="Pointman"/>
+		<Class value="Assaulter"/>
+		<Class value="Breacher"/>
+		<Class value="Stealth"/>
+		<Description value="@utility_bolt_cutter_desc"/>
+
+		<!-- the efficiency percent is multiplied by the door's breach time to get the final breaching time -->
+		<ModifiableParams
+			changeInTime="2000"
+			changeOutTime="1000"
+		/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="-10" turnSpeedLocalModifierPercent="-3"/>
+	</BoltCutter>
+
+	<BreachingKit name="Breaching Kit" inventoryBinding="SupportGear1" unlockCost="8" tooltip="@utility_breaching_kit_name">
+		<RenderObject2D texture="data/textures/gui/customization/items/breachingkit.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="weaponless"/>
+		<Class value="Pointman"/>
+		<Class value="Assaulter"/>
+		<Class value="Stealth"/>
+		<Description value="@utility_breaching_kit_desc"/>
+
+		<!-- the efficiency percent is multiplied by the door's breach time to get the final breaching time -->
+		<ModifiableParams
+			changeInTime="2500"
+			changeOutTime="1500"
+		/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="-23" turnSpeedLocalModifierPercent="-8"/>
+	</BreachingKit>
+</Equipment>

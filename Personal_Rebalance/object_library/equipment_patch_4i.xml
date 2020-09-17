@@ -1,0 +1,62 @@
+<Equipment>
+	<Firearm name="MP9 SMG (Auto / 6.5mm AP)" inventoryBinding="PrimaryWeapon" category="rifle" tooltip="@firearm_mp9_smg_name">
+		<Class value="AssaultEnemy"/>
+		<MobilityModifiers moveSpeedLocalModifierPercent="-13" turnSpeedLocalModifierPercent="0"/>
+		<RenderObject2D texture="data/textures/gui/customization/items/mp5a3_sd.tga"/> <!-- this is image is shown in the GUI customization page -->
+		<Skin binding="rifle"/>
+		<Description value=""/>
+
+		<ModifiableParams
+			muzzleDropDistanceMeters="0.5"
+			numPellets="1"
+			roundsPerMagazine="30"
+			roundsPerSecond="15"
+			damagePerBullet="10"
+			armorPiercingLevel="5" 
+			spreadAt10Meters="0.25"
+			silenced="0"
+			shotSoundMeters="20"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="2200"
+			reloadEmptyTime="3000"
+			changeInTime="1300"
+			changeOutTime="1200"
+			readyTime="200"
+			guardTime="80"
+
+		/> <!-- AP 6 is too damn OP, it ignores ALL armor. P90 has 5 AP. More reasonable. -->		<Params
+			caliberInfoText="@firearm_caliber_65x25_name"
+			operationInfoText="@firearm_operation_fullauto3burst_name"
+		/>
+
+		<AttackTypes>
+			<AttackType name="RecklessOperator_MP9Auto"/>
+			<AttackType name="RecklessOperator_MP9Burst"/>
+			<AttackType name="RecklessOperator_MP9AimedBurst"/>
+			<AttackType name="RecklessOperator_MP9AimedBurstLong"/>
+		</AttackTypes>
+
+		<MuzzleFlash muzzlePointOffset="14 -6" textureAnimation="ANIM_FX_MUZZLE_FLASH_SUPPRESSED">
+			<BulletTrace durationMSec="550">
+				<RenderObject2D texture="data/textures/fx/bullet_trace.dds" sizeX="512" sizeY="8" blendMode="add_masked"/>
+			</BulletTrace>
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="SFX_M4_EQUIP"/>
+			<Unequip name="SFX_M4_UNEQP"/>
+			<Reload name="SFX_1911_RELD"/>
+			<ReloadEmpty name="SFX_MP5SD_RELDEMPT"/>
+			<FireSingle name="SFX_MP9SD_FIRE"/>
+			<FireSingle name="SFX_MP9SD_FIREa"/>
+			<FireRapid name="SFX_MP9SD_RAPID_FIRE"/>
+			<FireRapid name="SFX_MP9SD_RAPID_FIREa"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPa"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPb"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPc"/>
+			<ShellDrop name="SFX_PISTOL_SHELL_DROPd"/>
+		</Sounds>
+	</Firearm>
+</Equipment>
