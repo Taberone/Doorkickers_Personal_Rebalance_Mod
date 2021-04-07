@@ -12,7 +12,7 @@ When we'll update the game with a newer version, the mod will probably be invali
 -->
 <Mod
 	name="Personal Rebalance"
-	description="Rebalances enemies."
+	description="Rebalances enemies and weapons."
 	image="textures/gui/mods/EnemyRebalance.png"
 	author="Taberone"
 	gameVersion="1.0.10"
